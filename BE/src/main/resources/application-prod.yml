@@ -1,0 +1,22 @@
+server:
+  port: ${env.prod.port}
+
+# java -jar -Dspring.profiles.active=dev *.jar
+spring:
+  config:
+    activate:
+      on-profile: dev
+  # MySQL
+  datasource:
+    driver-class-name: ${prod.mysql.driver}
+    url: ${prod.mysql.url}
+    username: ${prod.mysql.username}
+    password: ${prod.mysql.password}
+  # Jpa
+  jpa:
+    hibernate.ddl-auto: ${prod.ddl.option}
+  sql:
+    init:
+      mode: ${prod.sql.init.mode}
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql

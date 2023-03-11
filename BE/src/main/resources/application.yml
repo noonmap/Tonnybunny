@@ -1,0 +1,65 @@
+server:
+  servlet:
+    context-path: /api
+    # file upload
+    multipart:
+      enabled: true
+      max-file-size: 200MB
+
+spring:
+  profiles:
+    default: local
+  output:
+    ansi:
+      enabled: always
+
+  # Redis
+  redis:
+    host: ${db.redis.host}
+    port: ${db.redis.port}
+    password: ${db.redis.password}
+  
+  # swagger \uAD00\uB828 \uC124\uC815
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  # Mail 인증
+  mail:
+    # Naver smtp server 사용
+    host: smtp.naver.com
+    port: 465
+    username: ${auth.smtp.username}
+    password: ${auth.smtp.password}
+    properties:
+      debug: true
+      mail.smtp.auth: true
+      mail.smtp.ssl.enable: true
+      mail.smtp.ssl.trust: smtp.naver.com
+    #      mail.smtp.starttls.enable: true
+
+  
+  # JPA
+  jpa:
+    show-sql: ${jpa.show.sql}
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    properties:
+      hibernate:
+        format_sql: true
+
+# hibernate logging
+logging:
+  level:
+    org.hibernate: info
+
+# JWT Login
+token:
+  accesskey: ${auth.accesskey}
+  refreshkey: ${auth.refreshkey}
+  datakey: ${auth.datakey}
+
+
+# charset
+#server.servlet.encoding.charset: UTF-8
+#server.servlet.encoding.force: true

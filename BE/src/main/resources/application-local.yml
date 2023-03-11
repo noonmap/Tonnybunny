@@ -1,0 +1,42 @@
+server:
+  port: ${env.server.port}
+  error:
+    include-exception: false
+    include-message: always
+    include-stacktrace: on_param
+    whitelabel.enabled: true
+
+spring:
+  # config
+  config:
+    activate:
+      on-profile: local
+  # MySQL
+  datasource:
+    driver-class-name: ${db.mysql.driver}
+    url: ${db.mysql.url}
+    username: ${db.mysql.username}
+    password: ${db.mysql.password}
+  # SERVER AUTO RELOAD
+  devtools:
+    livereload.enabled: true
+  freemarker:
+    cache: false
+  # JPA for auto reload
+  jpa:
+    show-sql: false
+    hibernate.ddl-auto: ${jpa.ddl.option}
+  sql:
+    init:
+      mode: ${sql.init.mode}
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql
+
+  # Redis
+  redis:
+    host: ${db.redis.host}
+    port: ${db.redis.port}
+
+
+
+

@@ -1,1 +1,5 @@
 **/.DS_Store
+
+# java env file
+**/env.properties
+**/.env

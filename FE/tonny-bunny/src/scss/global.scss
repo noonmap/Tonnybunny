@@ -1,0 +1,133 @@
+// Pretendard Variable
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
+
+// variable (font, color)
+@import "variable.scss";
+@import "animate.css";
+@import "toastify-js/src/toastify.css";
+
+* {
+	font-family: "Pretendard Variable", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+	box-sizing: border-box;
+	color: var(--active-color);
+	@extend .text;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--b-back-color);
+	// cursor: url("), auto;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+hr {
+	color: var(--sub-color);
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+	opacity: 0;
+}
+
+.slide-up {
+	transition: all 0.3s;
+}
+.slide-up-enter-active {
+	transition: all 0.3s ease;
+}
+.slide-up-leave-active {
+	transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-up-enter-from,
+.slide-up-leave-active {
+	opacity: 0;
+	transform: translateY(100%);
+}
+
+.list-enter-active,
+.list-leave-active {
+	transition: all 0.4s;
+}
+.list-enter-from, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+	opacity: 0;
+	transform: translateY(30px);
+}
+
+.bounce-enter-active {
+	animation: bounce-in 0.5s;
+}
+.bounce-leave-active {
+	animation: bounce-in 0.3s reverse;
+}
+@keyframes bounce-in {
+	0% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@media only screen and (min-device-width: 100px) and (max-device-width: 768px) {
+	.modalCustom {
+		width: 85%;
+	}
+}
+
+::selection {
+	color: #fff;
+	background: var(--primary-color);
+}
+
+.alert {
+	position: absolute;
+	top: 0;
+	z-index: 100;
+	// background-color: red;
+}
+
+.customScroll {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 600px;
+
+	&::-webkit-scrollbar {
+		display: none; /* 크롬, 사파리, 오페라, 엣지 */
+	}
+}
+
+// .circle {
+//     // 마우스를 따라다니는 원 설정
+
+//     position: absolute;
+
+//     top: 0; // 초기 위치값을 설정해줍니다.
+
+//     left: 0; // 초기 위치값을 설정해줍니다.
+
+//     width: 150px; //원 가로사이즈
+
+//     height: 150px; //원 세로사이즈
+
+//     border-radius: 50%; // 원의 형태설정
+
+//     background-color: #9bf50b; //원 컬러설정
+
+//     transform: translate(-50%, -50%); // 원을 정가운데로 맞추기위해서 축을-50%이동해줍니다.
+// }
