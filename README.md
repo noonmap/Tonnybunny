@@ -7,6 +7,10 @@ SSAFY 8기 2학기 공통 프로젝트
 <div style="font-weight: bold; font-size: 1.2em;">2023.01.02 ~ 2023.02.17</div>
 </div>
 
+## 🥕 나의 프로젝트 참여 기록
+
+[![RepomonRepoCard](https://repomon.kr/card/repo?repoId=459)](https://repomon.kr/repo/459)
+
 ## 🥕 서비스 소개
 
 코로나 19의 영향력이 점차 감소하면서 해외 여행의 수요가 늘어나고 있습니다. 언어가 다른 장소에서 급한 용건이나 중요한 업무들을 수행하고 싶지만, AI 통번역 서비스는 아직 오역 사례가 종종 나와서 의사가 제대로 전달되고 있는지 우려가 되곤 합니다.
